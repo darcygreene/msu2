@@ -14,11 +14,17 @@ var LinearScale = d3.scaleLinear()
 
 	
 
-	var timeScale = d3.scaleTime ()
-		.domain([new Date(2016,0,1), new Date ()])
-		.range ([0,100]);
+var timeScale = d3.scaleTime ()
+	.domain([new Date(2016,0,1), new Date ()])
+	.range ([0,100]);
 
-		console.log (timeScale(new Date (2016, 6, 4)));
-		console.log(timeScale.invert(50));
+	console.log (timeScale(new Date (2016, 6, 4)));
+	console.log(timeScale.invert(50));
 
 		//January is 0
+
+var quaintizeScale = d3.scaleQuantize()
+	.domain ([0,100])
+	.range (['red','white','yellow'])
+
+	console.log (quantizeScale(30));
