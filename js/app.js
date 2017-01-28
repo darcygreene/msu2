@@ -12,4 +12,13 @@ var LinearScale = d3.scaleLinear()
 	console.log (LinearScale(100));
 	console.log (LinearScale(120));
 
-	console
+	
+
+	var timeScale = d3.scaleTime ()
+		.domain([new Date(2016,0,1), new Date ()])
+		.range ([0,100]);
+
+		console.log (timeScale(new Date (2016, 6, 4)));
+		console.log(timeScale.invert(50));
+
+		//January is 0
